@@ -1,0 +1,60 @@
+.CommentsTitulo {
+    width: 100%;
+    padding:0;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.CommentsAuthor {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.CommentsTime {
+    text-decoration: none;
+    color: #696969;
+    font-weight: bold;
+    font-size: 0.6em;
+}
+
+.CommentsBody {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+    margin-left: 10px;
+    line-height: 1.5em;
+}
+
+.CommentsTitulo p {
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    text-decoration: none;
+    color: #696969;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.CommentsTitulo hr {
+    padding-right: 50px;
+    color: #696969;
+    font-weight: bold;
+}
+
+.MdThumb {
+    margin-top: -5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.MdThumb.Up {
+    color: #4169E1;
+}
+
+.MdThumb.Down {
+    color: red;
+}

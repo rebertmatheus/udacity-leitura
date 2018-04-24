@@ -1,0 +1,13 @@
+.Content {
+    float: left;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #02b3e4;
+    font-weight: bold;
+}

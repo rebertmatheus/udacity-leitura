@@ -1,10 +1,8 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  text-align: center;
+  align-items: center;
 }
 
 .App-header {
@@ -12,10 +10,31 @@
   height: 150px;
   padding: 20px;
   color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.Categories {
+  background-color: #E0E0E0; 
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  margin-top: -20px;
+  height: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.App-title h1{
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .App-intro {

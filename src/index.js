@@ -4,6 +4,7 @@ import './css/index.css'
 import App from './screens/App'
 import registerServiceWorker from './registerServiceWorker'
 import { createStore, applyMiddleware, compose } from 'redux'
+import { BrowserRouter } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import logger from "redux-logger"
 import reducer from './redux/reducers'
@@ -18,7 +19,9 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>, document.getElementById('root'));
 
 registerServiceWorker();

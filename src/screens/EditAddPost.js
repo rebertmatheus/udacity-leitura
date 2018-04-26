@@ -25,7 +25,6 @@ class EditAddPost extends Component {
 
     componentDidMount() {
         if(this.props.match.params.id != null){
-            console.log('Entrou AQUI !')
             this.setState({op:'Edit'})
             this.props.posts.filter( post => {
                 if(post.id === this.props.match.params.id) {

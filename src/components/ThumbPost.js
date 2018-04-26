@@ -3,7 +3,7 @@ import CommentsList from './CommentsList'
 import AddComments from '../components/AddComents'
 import { timeToString } from '../utils/utils'
 import { Link } from 'react-router-dom'
-import { MdCancel, MdThumbUp, MdThumbDown } from 'react-icons/lib/md'
+import { MdCancel, MdThumbUp, MdThumbDown, MdEdit } from 'react-icons/lib/md'
 import * as actions from '../redux/actions'
 import { connect } from 'react-redux'
 
@@ -34,7 +34,12 @@ class ThumbPost extends Component {
         return(
             <div key= {id} className="CardContent CardShadow">
                 <div className="DivTitulo">
-                    <p className="DivTitulo titulo"><Link to={`/${category}/${id}`}>{title}</Link><span className="CommentsTime"> &nbsp; ({timeToString(timestamp)})</span><MdCancel className="MdThumb Cancel" onClick={() => this.onDeletePost(id)} /></p>
+                    <p className="DivTitulo titulo">
+                        <Link to={`/${category}/${id}`}>{title}</Link>
+                            <span className="CommentsTime"> &nbsp; ({timeToString(timestamp)})</span>
+                            <Link to={`/EditPost/${id}`}><MdEdit className="MdThumb Edit" /></Link>
+                            <MdCancel className="MdThumb Cancel" onClick={() => this.onDeletePost(id)} />
+                    </p>
                     <p className="DivTitulo author">by: {author}</p>
                 </div>
                 <div className="DivFooter">

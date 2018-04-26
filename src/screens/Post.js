@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CommentsList from '../components/CommentsList'
 import AddComments from '../components/AddComents'
+import NotFound from '../screens/NotFound'
 import { timeToString } from '../utils/utils'
 import { MdCancel, MdThumbUp, MdThumbDown, MdEdit } from 'react-icons/lib/md'
 import * as actions from '../redux/actions'
@@ -29,13 +30,12 @@ class Post extends Component {
   render() {
 
     const _id = this.props.match.params.id
-    let _post = this.props.posts.filter((p) => (p.id === _id))
+    let _post = this.props.posts ? this.props.posts.filter((p) => (p.id === _id)) : null
     
     return (
       <div>
         {
-
-          _post && _post.length > 0 ? 
+          _post && _post.length > 0 ?
           (
             _post.map( p => (
               <div key= {p.id} className="DetailContent DetailShadow">
@@ -82,9 +82,7 @@ class Post extends Component {
               </div>
             ))
           ) : (
-            <div>
-              <h3>Não há posts a ser exibido</h3>
-            </div>
+            <NotFound/>
           )
         }
       </div>

@@ -6,8 +6,6 @@ import AddButton from '../components/AddButton'
 import SortPosts from '../components/SortPosts'
 import sortBy from 'sort-by'
 
-//import { Link } from 'react-router-dom'
-
 class CategoriesList extends Component {
 
     state = {
@@ -69,8 +67,11 @@ class CategoriesList extends Component {
 
 }
 
-const mapStateToProps = ({ posts }) => ({
-        posts
-})
+function mapStateToProps ( props, ownProps ) {
+    return {
+        posts: props.posts.filter( p => p.category === ownProps.match.params.categories )
+    }
+}
+
 
 export default connect(mapStateToProps, actions)(CategoriesList)

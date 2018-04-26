@@ -28,6 +28,10 @@ class CommentsList extends Component {
 
     onSubmit = e => {
         e.preventDefault()
+        if( (this.state.author === '' || this.state.author === null) || 
+            (this.state.body === '' || this.state.body === null)) {
+                return
+        }
         const data = {
             id: uuidv1(),
             timestamp: Date.now(),

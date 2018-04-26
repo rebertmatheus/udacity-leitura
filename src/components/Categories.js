@@ -4,9 +4,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../css/Categories.css'
 
-//import ThumbPost from '../components/ThumbPost'
-//import PropTypes from 'prop-types'
-
 class Categories extends Component {
 
     componentDidMount () {

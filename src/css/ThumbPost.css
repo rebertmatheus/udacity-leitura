@@ -69,6 +69,10 @@
     color: red;
 }
 
+.MdThumb.Edit {
+    color: blue;
+}
+
 .DivComments {
     justify-content: left;
     margin: 0;

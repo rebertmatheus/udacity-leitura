@@ -81,7 +81,6 @@ function posts(state = {}, action) {
                 state.posts.map(post => {
                     let arrcomments = post.comments.filter(p => p.id !== action.comment.id)
                     post.comments = arrcomments
-                    console.log('postComArray:', post)
                     return post
                 })
             )
@@ -119,19 +118,3 @@ function posts(state = {}, action) {
 }
 
 export default posts
-
-
-
-/*
-
-
-const comments = state.posts.comments.filter(
-                item => { 
-                    console.log('PORR item', item)
-                    console.log('PORR action', action)
-                    item.id !== action.comment.Id
-                }
-            )
-
-
-*/
